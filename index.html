@@ -1,91 +1,269 @@
-<!-- Week 1: HTML -->
+<!-- Week 2: CSS -->
+<!DOCTYPE html>
+<html>
 
-    <html>
-        <head>
-            <title> Mike Peterson </title>
-        </head>
-    
-        <body>
+<head>
+    <title> About Me: Mike Peterson </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="About me">
+    <meta name="keywords" content="CS120, Web, Development, Tufts">
+    <meta name="author" content="Mike Peterson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <h1> Mike Peterson </h1>
+    <style type="text/css">
+		body,html{font-family: "Open Sans"}
+        h1 {font-size:32px; color:#581f1f; font-family: 'Open Sans', sans-serif; padding-bottom: 30px}
+        h2 {font-size:30px; color:#581f1f; font-family: 'Open Sans', sans-serif; padding-bottom: 30px}
 
-            <p>
-                I wanted to take this class as I've wanted to learn about web development and design for a while.
-                 I have been on the internet for much of my life and love to build, so the idea of building an 
-                 individualized website for myself from the ground up is very appealing. I don't have much 
-                 experience with web programming, but do have some programming experience from previous courses. 
-                 Languages include C++, C, Python, SQL, and VBA.
-            </p>
+        .foodParent {
+            display: flex;
+        }
+        
+        .foodimg {
+            flex: 1;
+            margin-right: 10px
+            border: 2px solid grey;
 
-            <p>
-                <strong> 3 Favorite Foods: </strong>
-                <ul>
-                    <li> Eggs Benedict </li>
-                    <li> Fresh Lobster (preferably steamed served w/ lemon and butter outdoors in the peak of summer) </li>
-                    <li> A BLT with fresh tomatoes at the peak of their season </li>
-                </ul>
-            </p>
+            background-image: url("images/eggsbenny.jpg");
+            background-repeat: no-repeat;
+            height: 400px;
+            width: auto;
+            background-size: contain;
 
-            <p>
-                <strong> My favorite restaurant: </strong>
-                <a href="http://barnaclephilsrestaurant.wordpress.com/"> Barnacle Phil's </a>
-                <br>
-                <EM> What I love most about this restaurant is its easy going island vibe and fresh-caught local seafood. </EM>    
-            </p>
+        }
 
-            <div>
-                <img src="https://www.simplyrecipes.com/thmb/_O_iB9SPfUqMSkHuxnhHESYijQE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Eggs-Benedict-LEAD-1-17de21a2975f4dd2bf339c0f5ec45c66.jpg"
-                    align="left" width="375" height="469"/>
-                <p> My favorite meal, Eggs Benedict. 
-                    My preferred way of serving is a lightly toasted english muffin smeared 
-                    with a small bit of hollandaise sauce, with fried canadian ham, a poached 
-                    egg, topped with pleny of hollandaise and a sprinkling of chives. Serve hot. </p>
-                <a href="https://www.simplyrecipes.com/recipes/eggs_benedict/"> <EM> Source </EM></a>
-                <br>
-            </div>
-            <br clear="all"/>
+        .foodtext {
+            flex: 1;
+            margin-right: 10px
+            border: 2px solid grey;
+        }
+
+
+        tr:nth-child(even){background-color: #8181814d}
+        
+        th {
+            background-color: #5788b3;
+            color: white;
+        }
+
+        .floatingimg {
+            height: 50px;
+            width: auto;
+            position: fixed;
+            right: 30px;
+            top: 100px;
+        }
+
+        .formParent {
+        overflow: hidden;
+        }
+
+        .formParent label {
+            display: block;
+            width: 8%;
+            float: left;
+            text-align: right;
+        }
+
+        .formParent .formContainer {
+            width: 70%;
+            float: left;
+        }
+
+
+
+	</style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+
+<!-- 
+CHANGES:
+x    -Set the font to a sans serif google font.
+x    -Set the color and size of all H1 and H2 and leave a margin of 30px below them.
+x    -Put a border around your list and center it on the page (note:  do NOT center the list items) 
+x    -Display your favorite food image using a background image.  
+        Place the explanatory text in a div that is adjacent to it.
+x    -Add a background color to alternate lines in the table
+    -Create a form to get a user's first and last name, city and state. Use a select element to choose the state. Labels for 
+        form elements should be in a <label> tag.  Labels should be in their own column and form elements in a column to the 
+        right of the labels,  Make the labels right aligned.
+    -Add icons for facebook and twitter to the page that are always 100 px from the top of the page, 30px in from the right side.
+-->
+
+<body>
+    <img class="floatingimg" src="images/twitter.png">
+    <img class="floatingimg" src="images/fb.png" style="top: 170px">
+
+    <h1> Mike Peterson </h1>
+
+    <p>
+        I wanted to take this class as I've wanted to learn about web development and design for a while.
+            I have been on the internet for much of my life and love to build, so the idea of building an 
+            individualized website for myself from the ground up is very appealing. I don't have much 
+            experience with web programming, but do have some programming experience from previous courses. 
+            Languages include C++, C, Python, SQL, and VBA.
+    </p>
+
+    <div style="border-style: solid">
+        <strong> 3 Favorite Foods: </strong>
+        <ul>
+            <li> Eggs Benedict </li>
+            <li> Fresh Lobster (preferably steamed served w/ lemon and butter outdoors in the peak of summer) </li>
+            <li> A BLT with fresh tomatoes at the peak of their season </li>
+        </ul>
+    </div>
+
+    <p>
+        <strong> My favorite restaurant: </strong>
+        <a href="http://barnaclephilsrestaurant.wordpress.com/"> Barnacle Phil's </a>
+        <br>
+        <EM> What I love most about this restaurant is its easy going island vibe and fresh-caught local seafood. </EM>    
+    </p>
+
+
+    <div class="foodParent">
+
+        <div class="foodimg"> 
+        </div>
+
+        <div class="foodtext">
+            <p> My favorite meal, Eggs Benedict. 
+                My preferred way of serving is a lightly toasted english muffin smeared 
+                with a small bit of hollandaise sauce, with fried canadian ham, a poached 
+                egg, topped with pleny of hollandaise and a sprinkling of chives. Serve hot. </p>
+            <a href="https://www.simplyrecipes.com/recipes/eggs_benedict/"> <EM> Source </EM></a>
             <br>
+        </div>
 
-            <div>
-                <table>
-                    <tr>
-                        <th>Book</th>
-                        <th>Cover</th>
-                        <th>Author</th>
-                        <th>Summary</th>
-                    </tr>
-                    <tr>
-                        <td>The Hobbit</td>
-                        <td>The Fellowship of the Ring</td>
-                        <td>Meditations</td>
-                        <td>A Short History of Nearly Everything</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://m.media-amazon.com/images/I/413V3sIKSJL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg" alt="Cover"></td>
-                        <td><img src="https://m.media-amazon.com/images/I/41gHG-a2OEL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg" alt="Cover"></td>
-                        <td><img src="https://m.media-amazon.com/images/I/41iW9a+nyZL._SX319_BO1,204,203,200_.jpg" alt="Cover"></td>
-                        <td><img src="https://m.media-amazon.com/images/I/41CHniZzf0L.jpg" alt="Cover"></td>
-                        <!-- https://m.media-amazon.com/images/I/413V3sIKSJL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg
-                        https://m.media-amazon.com/images/I/41gHG-a2OEL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg
-                        https://m.media-amazon.com/images/I/41iW9a+nyZL._SX319_BO1,204,203,200_.jpg
-                        https://m.media-amazon.com/images/I/41CHniZzf0L.jpg -->
-                    </tr>
-                    <tr>
-                        <td>J.R.R. Tolkien</td>
-                        <td>J.R.R. Tolkien</td>
-                        <td>Marcus Aurelius</td>
-                        <td>Bill Bryson</td>
-                    </tr>
-                    <tr>
-                        <td> A small Hobbit goes on a big quest. </td>
-                        <td> To extinguish the dreadful Sauron, a group of heroes assemble.</td>
-                        <td> A pragmatic list of proverbs, thoughts, and reflections that may help one live a more content life.</td>
-                        <td> Title says it all. How we got to hear, starting from the beginning of time. </td>
-                    </tr>
+    </div>
 
-                  </table>
-            </div>
+    <br clear="all"/>
+    <br>
+
+    
+    <div>
+        <table border = "1">
+            <tr>
+                <th>Book</th>
+                <th>Cover</th>
+                <th>Author</th>
+                <th>Summary</th>
+            </tr>
+            <tr>
+                <td>The Hobbit</td>
+                <td><img src="images/Hobbit.jpg" alt="Cover"></td>
+                <td>J.R.R. Tolkien</td>
+                <td> A small Hobbit goes on a big quest. </td>
+            </tr>
+            <tr>
+                <td>The Fellowship of the Ring</td>
+                <td><img src="images/lotr.jpg" alt="Cover"></td>
+                <td>J.R.R. Tolkien</td>
+                <td> To extinguish the dreadful Sauron, a group of heroes assemble.</td>
+            </tr>
+            <tr>
+                <td>Meditations</td>
+                <td><img src="images/meditations.jpg" alt="Cover" width="160" height=auto></td>
+                <td>Marcus Aurelius</td>
+                <td> A pragmatic list of proverbs, thoughts, and reflections that may help one live a more content life.</td>
+            </tr>
+            <tr>
+                <td>A Short History of Nearly Everything</td>
+                <td><img src="images/shorthistory.jpg" alt="Cover" width="165" height=auto></td>
+                <td>Bill Bryson</td>
+                <td> Title says it all. How we got to hear, starting from the beginning of time. </td>
+            </tr>
+
+            </table>
+            <br /><br />
             
+    </div>
 
-        </body>
-    </html>
+
+    <form class="formParent" action='#' method='get'>
+        <label>First Name:</label> 
+        <div class="formContainer">
+            <input type="text" name='firstName' id='first_name'>
+        </div>
+        <br /><br />
+
+        <label>Last Name:</label> 
+        <div class="formContainer">
+            <input type="text" name='lasttName' id='last_name'>
+        </div>
+        <br /><br />
+
+        <label>City:</label> 
+        <div class="formContainer">
+            <input type="text" name='city' id='city'>
+        </div>
+        <br /><br />
+
+        <label>State:</label> 
+        <div class="formContainer">
+        <select name="state">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+        </select>
+        </div>
+        <br /><br />
+        
+        <input type = "submit" value = "Go!">
+        
+        </form>
+
+</body>
+</html>
